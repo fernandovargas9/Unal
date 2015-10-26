@@ -77,7 +77,7 @@ abstract class Sequence {
      stroke(255);
      int x = 0, y = 0, maxi = compute(n);
      for(int i = 0; i < n; i++){
-        line(x,y,width/maxi,height/maxi);
+        line(x,y,map(n,0,maxi,0,width),map(n,0,maxi,0,height));
         x += compute(i);
         y += compute(i);
      } 
