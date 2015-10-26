@@ -34,5 +34,24 @@ class Lucas extends Sequence{
   
   void display(int n){
   
-  }
+    int x = n;
+    int x1 = n;
+    float max = sqrt(compute(x1)+compute(x1));
+    float[] numbers = new float[x+1];
+    int[] num = new int[x+1];
+    int w=(width/2),y=(height/2);
+    
+    for( int i = x; i > -1; i-- ) {
+      
+        numbers[i] = 0;   
+        numbers[i] = compute(i);
+        println(int(numbers[i]) + " ");
+        pushMatrix();
+        translate(w,y);
+        rotate(radians(45*i));
+        fill(map(numbers[i],0,max,0,255),map(numbers[i],0,max,x,0),map(numbers[i],0,max,0,x));
+        triangle(0.0,0.0,0.0,map(numbers[i],0,max,0,width),map(numbers[i],0,max,0,height),map(numbers[i],0,max,0,height));
+        popMatrix();
+        }
+    }
 }
