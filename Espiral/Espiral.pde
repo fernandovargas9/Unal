@@ -4,6 +4,12 @@ esta función retorna el nesimo término de la serie de fibonacci
 float d = 0;
 float r = 0;
 
+
+void Prueba(){
+println("Probando la colaboracion");
+}
+
+
 float fibo(float n){
   //Salida de la recursión
   if(n==1){
